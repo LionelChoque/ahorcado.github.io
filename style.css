@@ -105,9 +105,15 @@ p{
     display: flex;
     flex-direction: row;
     align-items:center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 }
+
+#input-lector{
+    position: absolute;
+    opacity: 0;
+}
+
 #btn-guardar,
 #cancelar,
 .cierra-modal{

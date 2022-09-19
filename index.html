@@ -15,7 +15,7 @@
         
     <!----------------PAGINA INICIAL----------------->
         <div  id="btn-home" class="div-desaparece">
-            <a href="#horca">
+            <a href="#input-lector">
                 <button id="iniciar-juego" class="btn-azul" onclick="iniciarJuego()">Iniciar Juego</button>
              </a>
 
@@ -33,7 +33,7 @@
                 <p>Max. de 10 letras</p>
             </div>
             <div id="btn-nueva-palabra">
-                <a href="#horca">
+                <a href="#input-lector">
                     <button id="btn-guardar" class="btn-azul" onclick="agregaPalabra()">Guardar y empezar</button>
                 </a>
 
@@ -50,14 +50,16 @@
 
 
         <div id="div-aparece-horca" class="canvas oculto">
-
+            <div id="div-input-lector">
+                <input autofocus id="input-lector" type="text">
+            </div>
             <div class="div-horca">
-                <canvas id="horca" tabindex="0" width="600" height="600"></canvas>
+                <canvas id="horca" tabindex="-1" width="600" height="600"></canvas>
 
             </div>
 
             <div id="btn-nueva-palabra">
-                <a href="#horca">
+                <a href="#input-lector">
                     <button id="btn-guardar" class="btn-azul" onclick="reinicio()">Nuevo Juego</button>
                 </a>
         
