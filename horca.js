@@ -7,7 +7,6 @@ var palabraSecreta = "";
 function seleccionaPalabraS(){
     var palabra = palabras[Math.floor(Math.random()*palabras.length)];
     palabraSecreta=palabra;
-    console.log(palabraSecreta+" " +palabras);
 }
 //Inicio de juego
 function iniciarJuego(){
@@ -34,7 +33,6 @@ function agregaPalabra(){
     palabras =["ALURA", "ORACLE", "PROGRAMAR", "APRENDER", "JAVASCRIPT","COMPUTADOR", "MATE", "TIEMPO", "ESTRELLA", "IDIOMA"];
     palabras.push(nuevaPalabra)
     }else{
-        console.log("largo"+nuevaPalabra.length);
         alert("la palabra contiene más de 8 letras");
         document.getElementById("nueva-palabra-input").value ="";
     }   

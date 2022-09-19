@@ -41,7 +41,6 @@ var key = document.getElementById("horca").addEventListener("keypress", handleKe
 function handleKeyPress(e){
     var code = e.keyCode;
    
-    console.log(code);
     identificaLetra(code);
 }
 
@@ -53,7 +52,6 @@ function identificaLetra(code){
     let codigo = 65;
     for(let i = 0; i< abecedario.length; i++){
         if(code==codigo){
-            console.log(abecedario[i]);
             iteraPalabraSecreta(abecedario[i]);
             break;
         }
@@ -70,12 +68,9 @@ function iteraPalabraSecreta(letra){
 
     var contador=0;
     var validador=0;
-    console.log("aciertos antes de validador " + aciertos.length);
     for(let j = 0; j <= aciertos.length; j++){
-        console.log("entro a for de validador"+ validador);
         if(letra.toUpperCase()==aciertos[j]){
             validador++;
-            console.log("entro al if del for de validador"+ validador);
         }
     }
         if(validador==0){
@@ -91,15 +86,12 @@ function iteraPalabraSecreta(letra){
             }
         }
         contador=0;
-        console.log("validador"+validador);
 
         }
 
 //DIBUJA LETRA ACERTADA-----------------
 
 function dibujaAcierto(posicion, letra){
-    console.log("POCISION "+posicion);
-    console.log("LETRA "+letra);
     let ancho = 600/palabraSecreta.length;
     let centro =ancho/2;
     tablero.font= "65px 'Inter'";
@@ -119,7 +111,6 @@ function dibujaAcierto(posicion, letra){
 var yerros = [];
 
 function dibujaYerro(letra){
-    console.log("errada "+letra);
     tablero.font= "30px 'Inter'";
     tablero.textAlign = "center";
     tablero.fillStyle = "#495057";
@@ -127,7 +118,6 @@ function dibujaYerro(letra){
     tablero.fillText(letra.toUpperCase(), 225 + (yerros.length * 30), 500);
     tablero.closePath();
     yerros.push(letra.toUpperCase());
-    console.log("CONTADOR " + yerros.length);
     dibujoHombreAhorcado(yerros.length);
     if(yerros.length==6){
         derrotaReinicio();
@@ -167,7 +157,6 @@ function cierraModal(){
 //DIBUJO DE CUERPO, AHORCADO----------------------
 
 function dibujoHombreAhorcado(caso){
-    console.log("llego " + caso);
         switch (caso){       
         case 1 :            
             tablero.lineWidth =8;
