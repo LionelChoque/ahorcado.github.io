@@ -1,0 +1,306 @@
+:root{
+    --dark-blue: #0A3871;
+    --transparent: rgba(255, 0, 0, 0.001);
+    --gray: #495057;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: #E5E5e5;
+    height: 100%;
+    width: 100%;
+ }
+ html{
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+ }
+.logo{
+    margin: 2vw 0 0 2vw;
+} 
+
+.div-desaparece{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+}
+a:hover{
+    cursor:default;
+}
+button:hover{
+    cursor: pointer;
+}
+#iniciar-juego{
+    margin-bottom: 30px;
+    width: 18rem;
+    height: 6rem;
+    font-size:18px;
+    border-radius:24px;
+
+
+}
+.btn-azul{
+    color:#ffffff;
+    background-color: var(--dark-blue);
+    border: solid 1px var(--dark-blue);
+}
+#agregar-palabra{
+    width: 14.5rem;
+    height: 3rem;
+}
+.btn-gris{
+    background-color: var(--transparent);
+    color:var(--dark-blue);
+    border-radius:15px;
+    border: solid 1px var(--dark-blue);
+}
+
+/* ----------------------------------- */
+
+#nueva-palabra{
+    align-items:center;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#nueva-palabra-input{
+    width: 100%;
+    height: 50%;
+    background-color: #E5E5e5;
+    border: 0;
+    outline: none;
+    color: var(--dark-blue);
+    padding: 10px;
+    font-size: 2rem;
+    resize: none;
+}
+::placeholder{
+    color: var(--dark-blue);
+}
+svg{
+    width: 0.7rem;
+    color: var(--gray);
+}
+#info{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    height: 2rem;
+}
+#signo-exclamacion{
+    width: 0.8rem;
+    margin-right: 2px;
+    color:#495057;
+}
+p{
+   margin:auto;
+   font-size: 0.7rem;
+}    
+#btn-nueva-palabra{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+}
+#btn-guardar,
+#cancelar,
+.cierra-modal{
+    margin-bottom: 30px;
+    width: 18rem;
+    height: 3rem;
+    font-size:16px;
+    border-radius:20px;
+    
+}
+#div-aparece-horca{
+    width: auto;
+    text-align: center;
+    
+}
+.div-horca{
+    width: 500px;
+    margin: 0 auto;
+
+}
+canvas{
+    width:100%;
+    height: 100%;
+}
+.canvas{
+    max-width: 80%;
+    margin: 0 10%;
+    outline: none;
+}
+canvas:focus{
+    outline: none;
+}
+
+.oculto{
+    display: none;
+}
+.modal { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #efefef;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in;
+  }
+  .modal-texto {
+    position: relative;
+    max-width: 100%;
+    max-height: 50vh;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .modal-visible{
+    visibility: visible;
+    opacity: 1;
+  }
+  #texto-popup{
+    font-size: 5rem;
+  }
+  .cierra-modal{
+    margin: 5rem;
+  }
+  .rojo{
+    color: red;
+  }
+  .verde{
+    color: green;
+  }
+
+@media screen and (max-width: 900px){
+
+    #iniciar-juego{
+        width: 22rem;
+        height: 7rem;
+        font-size: 30px;
+    }
+    #agregar-palabra{
+        width: 20rem;
+        height: 4rem;
+        font-size: 20px;
+    }
+    .canvas{
+        margin:0;
+        max-width: 100%;
+    }
+    #horca{
+        width: 100%;
+        height: 100%;
+    }
+    .logo {
+        margin: 4.5rem 0 0 0;
+    }
+    #nueva-palabra-input {
+        width: 80%;
+        height: 80%;
+        padding:0;
+        margin-top: 10%;
+    }
+    #info {
+        display: flex;
+        align-items: center;
+        margin: 0 auto 0 10%;
+    }
+    #btn-nueva-palabra {
+        width: 80%;
+        margin: auto;
+    }
+    #btn-guardar,
+    #cancelar,
+    .cierr-modal{
+        width: 17rem;
+        height: 4rem;
+        font-size:16px;
+        border-radius:20px;
+        
+    }
+    #div-aparece-horca {
+        box-sizing: content-box;
+        width: auto;
+        text-align: center;
+    }
+    #texto-popup{
+        font-size: 3rem;
+    }
+    .cierra-modal{
+        margin:3rem 0;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+
+    #iniciar-juego {
+        width: 19rem;
+        height: 6rem;
+        font-size: 22px;
+    }
+    #agregar-palabra {
+        width: 17rem;
+        height: 4rem;
+        font-size: 17px;
+    }
+    .canvas{
+        margin:0;
+        max-width: 100%;
+    }
+    .logo {
+        margin: 2rem 0 0 0;
+    }
+    .div-horca{
+        width: 320px;
+    }
+    #nueva-palabra-input {
+        width: 80%;
+        height: 80%;
+        padding:0;
+        margin-top: 10%;
+    }
+    #info {
+        display: flex;
+        align-items: center;
+        margin: 0 auto 0 10%;
+    }
+    #btn-nueva-palabra {
+        width: 80%;
+        flex-direction: column;
+        margin: auto;
+    }
+    #btn-guardar, #cancelar{
+        width: 17rem;
+        height: 4rem;
+        font-size:16px;
+        border-radius:20px;
+        
+    }
+    #div-aparece-horca {
+        box-sizing: content-box;
+        width: auto;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+

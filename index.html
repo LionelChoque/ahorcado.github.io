@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado-ALURA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="images/Logo.svg" alt="Logo Alura" class="logo">
+        
+    <!----------------PAGINA INICIAL----------------->
+        <div  id="btn-home" class="div-desaparece">
+            <a href="#horca">
+                <button id="iniciar-juego" tabindex="-1" class="btn-azul" onclick="iniciarJuego()">Iniciar Juego</button>
+             </a>
+
+            <a href="#nueva-palabra">
+                <button id="agregar-palabra" class="btn-gris" onclick="nuevaPalabra()">Agregar nueva palabra</button>
+            </a>
+
+        </div>
+    <!----------------PAGINA AGREGAR PALABRA----------------->
+
+        <div  id="nueva-palabra" class="oculto div-desaparece ">
+            <textarea name="text-nueva-palabra" id="nueva-palabra-input" placeholder="Ingrese una palabra"></textarea>
+            <div id="info">
+                <img id="signo-exclamacion" src="images/exclamation-mark.svg" alt="Simbolo de exclamacion"/>
+                <p>Max. de 10 letras</p>
+            </div>
+            <div id="btn-nueva-palabra">
+                <a href="#horca">
+                    <button id="btn-guardar" class="btn-azul" onclick="agregaPalabra()">Guardar y empezar</button>
+                </a>
+
+                <a href="#btn-home">
+                    <button id="cancelar" class="btn-gris" onclick="cancelar()">Cancelar</button>
+                </a>
+            </div>
+           
+        </div>
+
+
+
+    <!----------------PAGINA JUEGO AHORCADO----------------->
+
+
+        <div id="div-aparece-horca" class="canvas oculto">
+
+            <div class="div-horca">
+                <canvas id="horca" tabindex="-1" width="600" height="600"></canvas>
+
+            </div>
+
+            <div id="btn-nueva-palabra">
+                <a href="#horca">
+                    <button id="btn-guardar" class="btn-azul" onclick="reinicio()">Nuevo Juego</button>
+                </a>
+        
+                <a href="#btn-home">
+                    <button id="cancelar" class="btn-gris" onclick="cancelar()">Desistir</button>
+                </a>
+            </div>
+        </div>
+    <!---------------VENTANA MODAL - GANASTE/PERDISTE---------------------------->
+        <div id="modal-oculto" class="modal">
+            <div class="modal-texto">
+                <p id="texto-popup"></p>
+                <a href="#horca">
+                    <button class="cierra-modal btn-azul" onclick="cierraModal()">Salir</button>
+                </a>
+            </div>
+        </div>
+    
+
+
+        <script src="horca.js"></script>
+        <script src="canvas.js"></script>
+
+</body>
+</html>
