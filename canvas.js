@@ -129,7 +129,7 @@ function triunfoReinicio() {
 //ALERTA DERROTA, REINICIO O SALIR--------------------
 
 function derrotaReinicio() {
-    document.getElementById("texto-popup").innerHTML = "Fin del juego!";
+    document.getElementById("texto-popup").innerHTML = "Fin del juego! <br/>La palabra era:<br/>" + palabraSecreta;
     document.getElementById("modal-oculto").classList.add("modal-visible");
     document.getElementById("texto-popup").classList.remove("verde");
     document.getElementById("texto-popup").classList.add("rojo");
